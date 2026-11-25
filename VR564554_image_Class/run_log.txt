@@ -1,0 +1,169 @@
+split                       train  val  test  total
+breed                                              
+Abyssinian                     80   20    98    198
+American Bulldog               80   20   100    200
+American Pit Bull Terrier      80   20   100    200
+Basset Hound                   80   20   100    200
+Beagle                         80   20   100    200
+Bengal                         80   20   100    200
+Birman                         80   20   100    200
+Bombay                         77   19    88    184
+Boxer                          80   20    99    199
+British Shorthair              80   20   100    200
+Chihuahua                      80   20   100    200
+Egyptian Mau                   74   19    97    190
+English Cocker Spaniel         77   19   100    196
+English Setter                 80   20   100    200
+German Shorthaired             80   20   100    200
+Great Pyrenees                 80   20   100    200
+Havanese                       80   20   100    200
+Japanese Chin                  80   20   100    200
+Keeshond                       80   20    99    199
+Leonberger                     80   20   100    200
+Maine Coon                     80   20   100    200
+Miniature Pinscher             80   20   100    200
+Newfoundland                   77   19   100    196
+Persian                        80   20   100    200
+Pomeranian                     80   20   100    200
+Pug                            80   20   100    200
+Ragdoll                        80   20   100    200
+Russian Blue                   80   20   100    200
+Saint Bernard                  80   20   100    200
+Samoyed                        80   20   100    200
+Scottish Terrier               80   20    99    199
+Shiba Inu                      80   20   100    200
+Siamese                        79   20   100    199
+Sphynx                         80   20   100    200
+Staffordshire Bull Terrier     80   20    89    189
+Wheaten Terrier                80   20   100    200
+Yorkshire Terrier              80   20   100    200
+TOTAL                        2944  736  3669   7349
+
+min/max images per breed:
+  train: 74 - 80
+  val  : 19 - 20
+  test : 88 - 100
+Downloading: "https://download.pytorch.org/models/mobilenet_v3_small-047dcff4.pth" to ~/.cache/torch/hub/checkpoints/mobilenet_v3_small-047dcff4.pth
+train: features (2944, 576) in 44.8s
+val: features (736, 576) in 41.5s
+test: features (3669, 576) in 42.3s
+
+== Features + Logistic Regression ==
+  param=0.01: val macro-F1 0.8770 (0.1s)
+  param=0.1: val macro-F1 0.8687 (0.1s)
+  param=1.0: val macro-F1 0.8581 (0.0s)
+  param=10.0: val macro-F1 0.8634 (0.0s)
+  selected 0.01 | train {'accuracy': 0.9881114130434783, 'macro_f1': 0.988164374560951} | test {'accuracy': 0.856909239574816, 'macro_f1': 0.8550813055606785}
+
+== Features + Linear SVM ==
+  param=0.001: val macro-F1 0.8721 (5.5s)
+  param=0.01: val macro-F1 0.8739 (4.4s)
+  param=0.1: val macro-F1 0.8281 (6.8s)
+  param=1.0: val macro-F1 0.8117 (94.8s)
+  selected 0.01 | train {'accuracy': 0.9989809782608695, 'macro_f1': 0.9989864600918744} | test {'accuracy': 0.833469610248024, 'macro_f1': 0.8308542525118069}
+
+== Features + Random Forest ==
+  param=200: val macro-F1 0.8523 (0.6s)
+  param=500: val macro-F1 0.8616 (1.5s)
+  selected 500 | train {'accuracy': 1.0, 'macro_f1': 1.0} | test {'accuracy': 0.8261106568547288, 'macro_f1': 0.8215274175514486}
+device=mps  output=results/head
+trainable params: 628,773 / 1,555,781
+trainable layers: ['classifier.0', 'classifier.3']
+[01/15] train loss 1.712 acc 0.673 | val loss 1.229 acc 0.829 F1 0.829 | 22s
+[02/15] train loss 1.155 acc 0.878 | val loss 1.150 acc 0.882 F1 0.883 | 2s
+[03/15] train loss 1.049 acc 0.915 | val loss 1.090 acc 0.894 F1 0.895 | 1s
+[04/15] train loss 0.981 acc 0.950 | val loss 1.103 acc 0.878 F1 0.878 | 1s
+[05/15] train loss 0.931 acc 0.964 | val loss 1.093 acc 0.878 F1 0.879 | 1s
+[06/15] train loss 0.886 acc 0.978 | val loss 1.066 acc 0.899 F1 0.900 | 1s
+[07/15] train loss 0.869 acc 0.984 | val loss 1.080 acc 0.887 F1 0.888 | 1s
+[08/15] train loss 0.842 acc 0.989 | val loss 1.078 acc 0.891 F1 0.893 | 1s
+[09/15] train loss 0.827 acc 0.992 | val loss 1.059 acc 0.897 F1 0.897 | 2s
+[10/15] train loss 0.814 acc 0.996 | val loss 1.043 acc 0.905 F1 0.905 | 1s
+[11/15] train loss 0.807 acc 0.996 | val loss 1.049 acc 0.898 F1 0.898 | 1s
+[12/15] train loss 0.797 acc 0.997 | val loss 1.044 acc 0.904 F1 0.904 | 1s
+[13/15] train loss 0.796 acc 0.997 | val loss 1.045 acc 0.902 F1 0.902 | 1s
+[14/15] train loss 0.792 acc 0.998 | val loss 1.041 acc 0.902 F1 0.903 | 1s
+[15/15] train loss 0.787 acc 0.999 | val loss 1.041 acc 0.904 F1 0.904 | 1s
+
+best epoch 10 | train {'accuracy': 0.9976222826086957, 'macro_f1': 0.9976367983730965} | val {'accuracy': 0.904891304347826, 'macro_f1': 0.9053687906370579} | test {'accuracy': 0.8702643772144999, 'macro_f1': 0.868923537455778}
+training time 43s
+device=mps  output=results/full
+trainable params: 1,555,781 / 1,555,781
+[01/15] train loss 2.025 acc 0.565 | val loss 1.363 acc 0.800 F1 0.796 | 28s
+[02/15] train loss 1.254 acc 0.837 | val loss 1.189 acc 0.868 F1 0.867 | 5s
+[03/15] train loss 1.105 acc 0.896 | val loss 1.136 acc 0.880 F1 0.880 | 5s
+[04/15] train loss 1.005 acc 0.942 | val loss 1.143 acc 0.861 F1 0.862 | 5s
+[05/15] train loss 0.956 acc 0.954 | val loss 1.107 acc 0.876 F1 0.876 | 5s
+[06/15] train loss 0.903 acc 0.972 | val loss 1.111 acc 0.860 F1 0.859 | 5s
+[07/15] train loss 0.879 acc 0.978 | val loss 1.091 acc 0.875 F1 0.874 | 5s
+[08/15] train loss 0.847 acc 0.988 | val loss 1.081 acc 0.885 F1 0.884 | 5s
+[09/15] train loss 0.834 acc 0.993 | val loss 1.076 acc 0.878 F1 0.877 | 5s
+[10/15] train loss 0.818 acc 0.996 | val loss 1.055 acc 0.890 F1 0.890 | 5s
+[11/15] train loss 0.812 acc 0.994 | val loss 1.062 acc 0.885 F1 0.884 | 5s
+[12/15] train loss 0.805 acc 0.995 | val loss 1.063 acc 0.886 F1 0.886 | 5s
+[13/15] train loss 0.798 acc 0.995 | val loss 1.056 acc 0.885 F1 0.884 | 5s
+[14/15] train loss 0.801 acc 0.997 | val loss 1.054 acc 0.887 F1 0.887 | 5s
+[15/15] train loss 0.797 acc 0.997 | val loss 1.054 acc 0.887 F1 0.887 | 5s
+
+best epoch 10 | train {'accuracy': 0.9976222826086957, 'macro_f1': 0.9976391084894631} | val {'accuracy': 0.8899456521739131, 'macro_f1': 0.8895317218855268} | test {'accuracy': 0.8558190242572908, 'macro_f1': 0.8539713476241994}
+training time 100s
+| Method | Trainable params | Time (s) | Train acc | Test acc [95% CI] | Test macro-F1 [95% CI] | Train-test gap |
+|---|---|---|---|---|---|---|
+| Features + Linear SVM | 21,349 | 49 | 0.999 | 0.833 [0.821, 0.845] | 0.831 [0.818, 0.842] | 0.166 |
+| Features + Logistic Regression | 21,349 | 45 | 0.988 | 0.857 [0.846, 0.868] | 0.855 [0.844, 0.865] | 0.131 |
+| Features + Random Forest | - | 46 | 1.000 | 0.826 [0.815, 0.838] | 0.822 [0.810, 0.833] | 0.174 |
+| Full fine-tuning | 1,555,781 | 100 | 0.998 | 0.856 [0.845, 0.868] | 0.854 [0.843, 0.864] | 0.142 |
+| Classifier-head training | 628,773 | 43 | 0.998 | 0.870 [0.860, 0.881] | 0.869 [0.858, 0.878] | 0.127 |
+
+Top confusions:
+                        method                       true                  predicted  count  fraction_of_true_class
+         Features + Linear SVM  American Pit Bull Terrier           American Bulldog     17                0.170000
+         Features + Linear SVM                    Ragdoll                     Birman     14                0.140000
+         Features + Linear SVM                    Siamese                     Birman     12                0.120000
+         Features + Linear SVM Staffordshire Bull Terrier           American Bulldog     12                0.134831
+         Features + Linear SVM Staffordshire Bull Terrier  American Pit Bull Terrier     11                0.123596
+         Features + Linear SVM               Russian Blue          British Shorthair     11                0.110000
+         Features + Linear SVM                     Birman                    Siamese     11                0.110000
+         Features + Linear SVM                 Maine Coon                     Bengal     11                0.110000
+         Features + Linear SVM                  Chihuahua                  Shiba Inu     11                0.110000
+         Features + Linear SVM  American Pit Bull Terrier Staffordshire Bull Terrier     10                0.100000
+Features + Logistic Regression  American Pit Bull Terrier Staffordshire Bull Terrier     18                0.180000
+Features + Logistic Regression                     Birman                    Ragdoll     15                0.150000
+Features + Logistic Regression                    Ragdoll                     Birman     15                0.150000
+Features + Logistic Regression  American Pit Bull Terrier           American Bulldog     14                0.140000
+Features + Logistic Regression     English Cocker Spaniel             English Setter     13                0.130000
+Features + Logistic Regression                 Maine Coon                     Bengal     12                0.120000
+Features + Logistic Regression                  Chihuahua                  Shiba Inu     10                0.100000
+Features + Logistic Regression               Russian Blue          British Shorthair     10                0.100000
+Features + Logistic Regression Staffordshire Bull Terrier           American Bulldog     10                0.112360
+Features + Logistic Regression                 Maine Coon                    Ragdoll      9                0.090000
+      Features + Random Forest  American Pit Bull Terrier           American Bulldog     20                0.200000
+      Features + Random Forest                    Ragdoll                     Birman     19                0.190000
+      Features + Random Forest                  Chihuahua                  Shiba Inu     18                0.180000
+      Features + Random Forest                     Birman                    Ragdoll     16                0.160000
+      Features + Random Forest               Russian Blue          British Shorthair     16                0.160000
+      Features + Random Forest Staffordshire Bull Terrier                      Boxer     16                0.179775
+      Features + Random Forest          British Shorthair               Russian Blue     15                0.150000
+      Features + Random Forest Staffordshire Bull Terrier           American Bulldog     15                0.168539
+      Features + Random Forest                 Maine Coon                    Ragdoll     14                0.140000
+      Features + Random Forest  American Pit Bull Terrier Staffordshire Bull Terrier     14                0.140000
+              Full fine-tuning  American Pit Bull Terrier Staffordshire Bull Terrier     27                0.270000
+              Full fine-tuning  American Pit Bull Terrier           American Bulldog     15                0.150000
+              Full fine-tuning                 Maine Coon                     Bengal     12                0.120000
+              Full fine-tuning                    Ragdoll                     Birman     11                0.110000
+              Full fine-tuning Staffordshire Bull Terrier  American Pit Bull Terrier     10                0.112360
+              Full fine-tuning               Basset Hound                     Beagle     10                0.100000
+              Full fine-tuning                  Chihuahua                  Shiba Inu     10                0.100000
+              Full fine-tuning               Egyptian Mau                     Bengal      9                0.092784
+              Full fine-tuning         Miniature Pinscher Staffordshire Bull Terrier      9                0.090000
+              Full fine-tuning           American Bulldog                      Boxer      8                0.080000
+      Classifier-head training  American Pit Bull Terrier Staffordshire Bull Terrier     32                0.320000
+      Classifier-head training                    Ragdoll                     Birman     16                0.160000
+      Classifier-head training  American Pit Bull Terrier           American Bulldog     15                0.150000
+      Classifier-head training                 Maine Coon                     Bengal     12                0.120000
+      Classifier-head training                 Maine Coon                    Ragdoll     10                0.100000
+      Classifier-head training               Egyptian Mau                     Bengal     10                0.103093
+      Classifier-head training Staffordshire Bull Terrier           American Bulldog     10                0.112360
+      Classifier-head training     English Cocker Spaniel             English Setter      9                0.090000
+      Classifier-head training               Basset Hound                     Beagle      9                0.090000
+      Classifier-head training         Miniature Pinscher Staffordshire Bull Terrier      9                0.090000

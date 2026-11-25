@@ -1,0 +1,20 @@
+{
+  "method": "Classifier-head training_seed2",
+  "trainable_params": 628773,
+  "total_params": 1555781,
+  "train_time_s": 40.45284462487325,
+  "best_epoch": 9,
+  "selection_rule": "max validation macro-F1",
+  "train": {
+    "accuracy": 0.9983016304347826,
+    "macro_f1": 0.9983128304874271
+  },
+  "val": {
+    "accuracy": 0.9021739130434783,
+    "macro_f1": 0.9035664697833315
+  },
+  "test": {
+    "accuracy": 0.8691741618969746,
+    "macro_f1": 0.8683853354384239
+  }
+}

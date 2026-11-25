@@ -1,0 +1,20 @@
+{
+  "extraction_time_s": {
+    "train": 44.845542083028704,
+    "val": 41.49137962493114,
+    "test": 42.341352083021775
+  },
+  "feature_dim": 576,
+  "env": {
+    "python": "3.13.3",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "torch": "2.15.0",
+    "torchvision": "0.29.2",
+    "scikit_learn": "1.9.1",
+    "numpy": "2.5.5",
+    "device": "mps",
+    "seed": 42,
+    "deterministic_algorithms": true,
+    "weights": "MobileNet_V3_Small_Weights.IMAGENET1K_V1"
+  }
+}

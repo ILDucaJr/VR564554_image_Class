@@ -1,0 +1,51 @@
+method,true,predicted,count,fraction_of_true_class
+Features + Linear SVM,American Pit Bull Terrier,American Bulldog,17,0.17
+Features + Linear SVM,Ragdoll,Birman,14,0.14
+Features + Linear SVM,Siamese,Birman,12,0.12
+Features + Linear SVM,Staffordshire Bull Terrier,American Bulldog,12,0.1348314606741573
+Features + Linear SVM,Staffordshire Bull Terrier,American Pit Bull Terrier,11,0.12359550561797752
+Features + Linear SVM,Russian Blue,British Shorthair,11,0.11
+Features + Linear SVM,Birman,Siamese,11,0.11
+Features + Linear SVM,Maine Coon,Bengal,11,0.11
+Features + Linear SVM,Chihuahua,Shiba Inu,11,0.11
+Features + Linear SVM,American Pit Bull Terrier,Staffordshire Bull Terrier,10,0.1
+Features + Logistic Regression,American Pit Bull Terrier,Staffordshire Bull Terrier,18,0.18
+Features + Logistic Regression,Birman,Ragdoll,15,0.15
+Features + Logistic Regression,Ragdoll,Birman,15,0.15
+Features + Logistic Regression,American Pit Bull Terrier,American Bulldog,14,0.14
+Features + Logistic Regression,English Cocker Spaniel,English Setter,13,0.13
+Features + Logistic Regression,Maine Coon,Bengal,12,0.12
+Features + Logistic Regression,Chihuahua,Shiba Inu,10,0.1
+Features + Logistic Regression,Russian Blue,British Shorthair,10,0.1
+Features + Logistic Regression,Staffordshire Bull Terrier,American Bulldog,10,0.11235955056179775
+Features + Logistic Regression,Maine Coon,Ragdoll,9,0.09
+Features + Random Forest,American Pit Bull Terrier,American Bulldog,20,0.2
+Features + Random Forest,Ragdoll,Birman,19,0.19
+Features + Random Forest,Chihuahua,Shiba Inu,18,0.18
+Features + Random Forest,Birman,Ragdoll,16,0.16
+Features + Random Forest,Russian Blue,British Shorthair,16,0.16
+Features + Random Forest,Staffordshire Bull Terrier,Boxer,16,0.1797752808988764
+Features + Random Forest,British Shorthair,Russian Blue,15,0.15
+Features + Random Forest,Staffordshire Bull Terrier,American Bulldog,15,0.16853932584269662
+Features + Random Forest,Maine Coon,Ragdoll,14,0.14
+Features + Random Forest,American Pit Bull Terrier,Staffordshire Bull Terrier,14,0.14
+Full fine-tuning,American Pit Bull Terrier,Staffordshire Bull Terrier,27,0.27
+Full fine-tuning,American Pit Bull Terrier,American Bulldog,15,0.15
+Full fine-tuning,Maine Coon,Bengal,12,0.12
+Full fine-tuning,Ragdoll,Birman,11,0.11
+Full fine-tuning,Staffordshire Bull Terrier,American Pit Bull Terrier,10,0.11235955056179775
+Full fine-tuning,Basset Hound,Beagle,10,0.1
+Full fine-tuning,Chihuahua,Shiba Inu,10,0.1
+Full fine-tuning,Egyptian Mau,Bengal,9,0.09278350515463918
+Full fine-tuning,Miniature Pinscher,Staffordshire Bull Terrier,9,0.09
+Full fine-tuning,American Bulldog,Boxer,8,0.08
+Classifier-head training,American Pit Bull Terrier,Staffordshire Bull Terrier,32,0.32
+Classifier-head training,Ragdoll,Birman,16,0.16
+Classifier-head training,American Pit Bull Terrier,American Bulldog,15,0.15
+Classifier-head training,Maine Coon,Bengal,12,0.12
+Classifier-head training,Maine Coon,Ragdoll,10,0.1
+Classifier-head training,Egyptian Mau,Bengal,10,0.10309278350515463
+Classifier-head training,Staffordshire Bull Terrier,American Bulldog,10,0.11235955056179775
+Classifier-head training,English Cocker Spaniel,English Setter,9,0.09
+Classifier-head training,Basset Hound,Beagle,9,0.09
+Classifier-head training,Miniature Pinscher,Staffordshire Bull Terrier,9,0.09

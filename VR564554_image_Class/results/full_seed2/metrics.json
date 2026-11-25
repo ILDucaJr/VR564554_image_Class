@@ -1,0 +1,20 @@
+{
+  "method": "Full fine-tuning_seed2",
+  "trainable_params": 1555781,
+  "total_params": 1555781,
+  "train_time_s": 98.77449833322316,
+  "best_epoch": 13,
+  "selection_rule": "max validation macro-F1",
+  "train": {
+    "accuracy": 0.9996603260869565,
+    "macro_f1": 0.9996621489648561
+  },
+  "val": {
+    "accuracy": 0.907608695652174,
+    "macro_f1": 0.9080413381811089
+  },
+  "test": {
+    "accuracy": 0.8601798855273917,
+    "macro_f1": 0.8587672169377569
+  }
+}

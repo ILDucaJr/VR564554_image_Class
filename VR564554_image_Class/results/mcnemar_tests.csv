@@ -1,0 +1,11 @@
+method_a,method_b,only_a_correct,only_b_correct,p_value
+Features + Linear SVM,Features + Logistic Regression,127,213,3.6008205358904095e-06
+Features + Linear SVM,Features + Random Forest,263,236,0.24442872310807257
+Features + Linear SVM,Full fine-tuning,168,250,7.079221557571292e-05
+Features + Linear SVM,Classifier-head training,122,257,3.483626310617986e-12
+Features + Logistic Regression,Features + Random Forest,233,120,1.836770135301234e-09
+Features + Logistic Regression,Full fine-tuning,161,157,0.86643490126261
+Features + Logistic Regression,Classifier-head training,94,143,0.0017621642314565326
+Features + Random Forest,Full fine-tuning,164,273,2.0779269704381828e-07
+Features + Random Forest,Classifier-head training,120,282,3.8790990983510696e-16
+Full fine-tuning,Classifier-head training,106,159,0.0013566937059703644

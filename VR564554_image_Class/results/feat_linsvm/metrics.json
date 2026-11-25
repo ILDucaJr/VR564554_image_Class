@@ -1,0 +1,27 @@
+{
+  "method": "Features + Linear SVM",
+  "trainable_params": 21349,
+  "total_params": null,
+  "train_time_s": 49.279869499849156,
+  "feature_extraction_time_s": {
+    "train": 44.845542083028704,
+    "val": 41.49137962493114,
+    "test": 42.341352083021775
+  },
+  "classifier_fit_time_s": 4.434327416820452,
+  "grid_search_total_time_s": 111.52098849997856,
+  "selected_hyperparam": 0.01,
+  "selection_rule": "max validation macro-F1",
+  "train": {
+    "accuracy": 0.9989809782608695,
+    "macro_f1": 0.9989864600918744
+  },
+  "val": {
+    "accuracy": 0.875,
+    "macro_f1": 0.873913210325386
+  },
+  "test": {
+    "accuracy": 0.833469610248024,
+    "macro_f1": 0.8308542525118069
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "args": {
+    "mode": "head",
+    "epochs": 15,
+    "lr": 0.001,
+    "backbone_lr": null,
+    "batch_size": 32,
+    "weight_decay": 0.0001,
+    "label_smoothing": 0.1,
+    "num_workers": 6,
+    "seed": 42,
+    "tag": "",
+    "no_download": false
+  },
+  "loss": "CrossEntropyLoss",
+  "optimizer": "AdamW",
+  "scheduler": "CosineAnnealingLR",
+  "trainable_layers": [
+    "classifier.0",
+    "classifier.3"
+  ],
+  "selected_checkpoint": "results/head/best.pt",
+  "env": {
+    "python": "3.13.3",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "torch": "2.15.0",
+    "torchvision": "0.29.2",
+    "scikit_learn": "1.9.1",
+    "numpy": "2.5.5",
+    "device": "mps",
+    "seed": 42,
+    "deterministic_algorithms": true,
+    "weights": "MobileNet_V3_Small_Weights.IMAGENET1K_V1"
+  }
+}

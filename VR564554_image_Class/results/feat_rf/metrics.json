@@ -1,0 +1,27 @@
+{
+  "method": "Features + Random Forest",
+  "trainable_params": null,
+  "total_params": null,
+  "train_time_s": 46.38107283320278,
+  "feature_extraction_time_s": {
+    "train": 44.845542083028704,
+    "val": 41.49137962493114,
+    "test": 42.341352083021775
+  },
+  "classifier_fit_time_s": 1.5355307501740754,
+  "grid_search_total_time_s": 2.158572625136003,
+  "selected_hyperparam": 500,
+  "selection_rule": "max validation macro-F1",
+  "train": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0
+  },
+  "val": {
+    "accuracy": 0.8614130434782609,
+    "macro_f1": 0.8616015977216632
+  },
+  "test": {
+    "accuracy": 0.8261106568547288,
+    "macro_f1": 0.8215274175514486
+  }
+}
